@@ -1,5 +1,5 @@
-# hello-world
-My first repository
+# Kevin's coding note
+I will try to put some coding notes here
 
-Hi, I am no one.
-That's all.
+Right now it still has nothing inside
+So...Let's see?
