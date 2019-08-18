@@ -1,5 +1,6 @@
 # Kevin's coding note
 I will try to put some coding notes here
 
-Right now it still has nothing inside
-So...Let's see?
+Right now there are some C++ scripts recording my progress in learning this language.
+
+I will update!
