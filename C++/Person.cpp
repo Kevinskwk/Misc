@@ -2,21 +2,27 @@
 #include <string>
 using namespace std;
 
-struct Person
-{
-    //constructors
-    Person() = default;
-    Person(const string &n) : name(n) {}
-    Person(const string &n, string &a) : name(n), address(a) {} 
-    
+class Person {
+friend istream &read(istream &is, Person &someone);
+friend ostream &print(ostream &os, const Person &someone);
+private:
     //data members
     string name;
     string address;
-
+public:
+    //constructors
+    Person() = default;
+    Person(const string &n) : name(n) {}
+    Person(const string &n, string &a) : name(n), address(a) {}
+    ~Person();
     //member functions
     string getname() const {return name;}
     string getaddress() const {return address;}
 };
+
+Person::~Person()
+{
+}
 
 //class dependent non-member functions
 istream &read(istream &is, Person &someone){
