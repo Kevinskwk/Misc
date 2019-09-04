@@ -1,0 +1,8 @@
+# Environments
+env/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# VS code
+.vscode
