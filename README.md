@@ -1,6 +1,2 @@
-# Kevin's coding note
-I will try to put some coding notes here
-
-Right now there are some C++ scripts recording my progress in learning this language.
-
-I will update!
+# Kevin's Misc Repo
+This is a misc repository, some random code (maybe those I use to learn) will be put here.
