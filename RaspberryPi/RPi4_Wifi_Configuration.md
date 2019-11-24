@@ -78,7 +78,7 @@ This is a tutorial to connect your RPi 4 to SUTD Wifi (PEAP-Enterprise) or SUTD 
     ```
     and then restart wpa_supplicant with wext driver with the command:
    ```
-    $ sudo wpa_supplicant -B -i wlan0 -D wext -c /etc/wpa_supplicant/example.conf
+    $ sudo wpa_supplicant -B -i wlan0 -D wext -c /etc/wpa_supplicant/wpa_supplicant.conf
    ```
    where:
    
