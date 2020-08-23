@@ -6,3 +6,8 @@ env/
 
 # VS code
 .vscode
+
+# Java compiled files
+*.class
+
+*.zip
