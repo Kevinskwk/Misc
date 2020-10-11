@@ -14,3 +14,8 @@ env/
 
 *.txt
 
+JavaAlgo/Boggle/.idea/
+JavaAlgo/Boggle/.lift/
+
+JavaAlgo/Boggle/Algorithms, Part II.iml
+JavaAlgo/Boggle/logo.png
