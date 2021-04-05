@@ -82,13 +82,41 @@ This is a tutorial to connect your RPi 4 to SUTD Wifi (PEAP-Enterprise) or SUTD 
    ```
    where:
    
-   - -B` - Fork into background.
+   - `-B` - Fork into background.
    - `-c *filename*` - Path to configuration file.
    - `-i *interface*` - Interface to listen on. If using ethernet, use `-i eth0` instead of `-i wlan0`.
    - `-D driver` - Optionally specify the driver to be used. For a list of supported drivers see the output of `wpa_supplicant -h`.
      - `nl80211` is the current standard, but not all wireless chip's modules support it.
      - `wext` is currently deprecated, but still widely supported.
    
-- In our case, nl80211 is not supported by RPi 4, so we need to manually specify to use wext driver.
+- In our case, `nl80211` is not supported by RPi 4, so we need to manually specify to use `wext` driver.
 
 - Then wait for the wifi to get connected, you are ready to go!
+
+## Configure Raspberry Pi to automatically connect to SUTD_Wifi on boot
+
+* Create `wifi.sh` script file using command `nano /home/pi/wifi.sh` and pasting the following
+
+  ```
+  #!usr/bin/env bash
+  
+  sudo killall wpa_supplicant
+  sleep 3
+  sudo wpa_supplicant -B -i wlan0 -D wext -c /etc/wpa_supplicant/wpa_supplicant.conf
+  ```
+  
+  
+
+* Create autostart folder using command `mkdir /home/pi/.config/autostart`
+
+* Create `.desktop` file that runs on boot using command `nano /home/pi/.config/autostart/wifi.desktop` and pasting the following
+  ```
+  [Desktop Entry]
+  Encoding=UTF-8
+  Version=1.0
+  Type=Application
+  Terminal=false
+  Exec=/home/pi/wifi.sh
+  Name=SUTD Wifi
+  ```
+	
